@@ -24,7 +24,7 @@ int main() {
     while(true) {
         cin >> N;
         int number_of_sum = N * (N - 1) / 2;
-        if (N == 0)
+        if (cin.eof())
             break;
         multiset<int> sums;
         for (int i = 0; i < number_of_sum; i++) {
@@ -75,7 +75,7 @@ NEXT_I:
             }
         }
         if (it == sums.end()) {
-            cout << "impossible" << endl;
+            cout << "Impossible" << endl;
         }
         else {
             output(nums, N);
