@@ -50,13 +50,13 @@ int main() {
             nums[0] /= 2;
             nums[1] = sums_0 - nums[0];
             nums[2] = sums_1 - nums[0];
-            if (nums[0] <= 0 || nums[1] < nums[0] || nums[2] < nums[1])
+            if (nums[1] < nums[0] || nums[2] < nums[1])
                 goto NEXT_I;
             while (true) {
                 for (int i = 1; i < last_it; i++) {
                     multiset<int>::iterator sum_it = i_sums.find(nums[last_it] + nums[i]);
                     if (sum_it == i_sums.end()) {
-                        cerr << nums[last_it] + nums[i] << " is not found!" << endl;
+                        //cerr << nums[last_it] + nums[i] << " is not found!" << endl;
                         goto NEXT_I;
                     }
                     else {
