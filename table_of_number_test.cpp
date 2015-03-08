@@ -45,5 +45,4 @@ int main() {
                 cerr << ' ';
         }
     }
-    cout << 0 << endl;
 }
